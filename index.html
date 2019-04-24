@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Product Attributes Widget</title>
+    <!--
+    Include styles from the Contentful app.
+
+    See http://contentful.github.io/ui-extensions-sdk/styleguide for information on
+    how to include and apply these styles.
+     -->
+    <link rel="stylesheet" href="https://contentful.github.io/ui-extensions-sdk/cf-extension.css">
+    <style>
+    </style>
+
+    <!--
+    Load the Extensions API that is used to communicate with the containing app.
+    -->
+    <script src="https://unpkg.com/contentful-ui-extensions-sdk@3"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+
+        <ul class="nav nav-tabs">
+            <li class="active"><a data-toggle="tab" href="#google">Google</a></li>
+            <li><a data-toggle="tab" href="#facebook">Facebook</a></li>
+            <li><a data-toggle="tab" href="#twitter">Twitter</a></li>
+            <li><a data-toggle="tab" href="#linkedin">Linkedin</a></li>
+            <li><a data-toggle="tab" href="#pinterest">Pinterest</a></li>
+            <li><a data-toggle="tab" href="#slack">Slack</a></li>
+        </ul>
+
+        <div class="tab-content">
+            <div id="google" class="tab-pane fade in active">
+                <div class="card-seo-google">
+                    <span class="card-seo-google__title js-preview-title">Meta Tags —&nbsp;Preview, Edit and Generate</span>
+                    <div class="card-seo-google__url">
+                        <span class="card-seo-google__url-title js-preview-domain">https://metatags.io/</span>
+                        <span class="card-seo-google__url-arrow"></span>
+                    </div>
+                    <span class="card-seo-google__description js-preview-description">
+                      With Meta Tags you can edit and experiment with your content then preview how your webpage will look on Google, Facebook, Twitter and more!
+                    </span>
+                </div>
+            </div>
+            <div id="facebook" class="tab-pane fade">
+                    <div class="card-seo-facebook">
+                        <div class="card-seo-facebook__image js-preview-image" style="background-image: url('https://www.wonderplugin.com/videos/demo-image0.jpg');"></div>
+                        <div class="card-seo-facebook__text">
+                            <span class="card-seo-facebook__link js-preview-domain">metatags.io</span>
+                            <div class="card-seo-facebook__content">
+                                <div style="margin-top:5px">
+                                    <div class="card-seo-facebook__title js-preview-title">Meta Tags —&nbsp;Preview, Edit and Generate</div>
+                                </div>
+                                <span class="card-seo-facebook__description js-preview-description">With Meta Tags you can edit and experiment with your content then preview how your webpage will look on Google, Facebook, Twitter and more!</span>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div id="twitter" class="tab-pane fade">
+                <div class="card-seo-twitter">
+                    <div class="card-seo-twitter__image js-preview-image" style="background-image: url('https://www.wonderplugin.com/videos/demo-image0.jpg');"></div>
+                    <div class="card-seo-twitter__text">
+                        <span class="card-seo-twitter__title js-preview-title">Meta Tags —&nbsp;Preview, Edit and Generate</span>
+                        <span class="card-seo-twitter__description js-preview-description">With Meta Tags you can edit and experiment with your content then preview how your webpage will look on Google, Facebook, Twitter and more!</span>
+                        <span class="card-seo-twitter__link js-preview-domain">metatags.io</span>
+                    </div>
+                </div>
+            </div>
+            <div id="linkedin" class="tab-pane fade">
+                <div class="card-seo-linkedin">
+                    <div class="card-seo-linkedin__image js-preview-image" style="background-image: url('https://www.wonderplugin.com/videos/demo-image0.jpg');"></div>
+                    <div class="card-seo-linkedin__text">
+                        <div class="card-seo-linkedin__content">
+                            <div class="card-seo-linkedin__title js-preview-title">Meta Tags —&nbsp;Preview, Edit and Generate</div>
+                            <span class="card-seo-linkedin__link js-preview-domain">metatags.io</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="pinterest" class="tab-pane fade">
+                <div class="card-seo-pinterest">
+                    <div class="card-seo-pinterest__image">
+                        <img id="pinterest-image" class="js-preview-img" src="https://www.wonderplugin.com/videos/demo-image0.jpg">
+                    </div>
+
+                    <div class="card-seo-pinterest__content">
+                        <div class="card-seo-pinterest__title js-preview-title">Meta Tags —&nbsp;Preview, Edit and Generate</div>
+                        <div class="card-seo-pinterest__dots">
+                            <div class="card-seo-pinterest__dot"></div>
+                            <div class="card-seo-pinterest__dot"></div>
+                            <div class="card-seo-pinterest__dot"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="slack" class="tab-pane fade">
+                <div class="card-seo-slack__content">
+<!--                    <div class="flex">-->
+<!--                        <img class="card-seo-slack__favicon js-preview-favicon" src="/assets/favicon-71ffc45e665afe1eb5447e86787278b28f56dfb39a6d53c8603d8477bdee7b6f.png"> <span class="card-seo-slack__link js-preview-site-name">Meta Tags</span>-->
+<!--                    </div>-->
+                    <div class="card-seo-slack__title js-preview-title">Meta Tags —&nbsp;Preview, Edit and Generate</div>
+                    <span class="card-seo-slack__description js-preview-description">With Meta Tags you can edit and experiment with your content then preview how your webpage will look on Google, Facebook, Twitter and more!</span>
+                    <div class="card-seo-slack__image js-preview-image js-slack-image" style="background-image: url('https://www.wonderplugin.com/videos/demo-image0.jpg');"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        window.contentfulExtension.init(function (entry) {
+            entry.window.startAutoResizer()
+            var productMap = new Map();
+            var fieldValue = entry.field.getValue();
+            var lang = "en";
+            entry.fields[]
+            //console.log("Test"+api.space)
+            //api.space.getEntries({content_type: 'product'})
+            //console.log(api.space.getContentTypes())
+
+
+
+        function isEmpty(val) {
+            return (val === undefined || val == null || val.length <= 0) ? true : false;
+        }
+
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+{
+  "name": "Seo Preview",
+  "id": "seo-preview",
+  "fieldTypes": ["Text"],
+  "srcdoc": "./index.html"
+}

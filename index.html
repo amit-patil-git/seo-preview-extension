@@ -107,9 +107,9 @@
             var seoDescriptionField =  extension.parameters.instance.seoDescription;
             var seoImageField =  extension.parameters.instance.seoImage;
 
-            extension.entry.fields[seoTitle].onValueChanged(seoTitleChangeHandler);
-            extension.entry.fields[seoDescription].onValueChanged(seoDescriptionChangeHandler);
-            extension.entry.fields[seoImage].onValueChanged(seoImageChangeHandler);
+            extension.entry.fields[seoTitleField].onValueChanged(seoTitleChangeHandler);
+            extension.entry.fields[seoDescriptionField].onValueChanged(seoDescriptionChangeHandler);
+            extension.entry.fields[seoImageField].onValueChanged(seoImageChangeHandler);
 
         function isEmpty(val) {
             return (val === undefined || val == null || val.length <= 0) ? true : false;

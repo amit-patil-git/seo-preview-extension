@@ -2,5 +2,30 @@
   "name": "Seo Preview",
   "id": "seo-preview",
   "fieldTypes": ["Text"],
-  "srcdoc": "./index.html"
+  "srcdoc": "./index.html",
+  "parameters": {
+    "instance": [
+      {
+        "id": "seoTitle",
+        "name": "SEO Title",
+        "type": "Symbol",
+        "default": "seoTitle",
+        "description": "Id of SEO Title field"
+      },
+      {
+        "id": "seoDescription",
+        "name": "SEO Description",
+        "type": "Symbol",
+        "default": "seoDescription",
+        "description": "Id of SEO Description field"
+      },
+      {
+        "id": "seoImage",
+        "name": "SEO Image",
+        "type": "Symbol",
+        "default": "seoImage",
+        "description": "Id of SEO Image field"
+      }
+    ]
+  }
 }

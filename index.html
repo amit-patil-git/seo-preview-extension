@@ -12,7 +12,6 @@
     Load the Extensions API that is used to communicate with the containing app.
     -->
     <script src="https://unpkg.com/contentful-ui-extensions-sdk@3"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </head>
@@ -134,26 +133,26 @@
         }
 
         function previewImage(value, css) {
-            var x = document.getElementsByClassName(css);
-            var img = document.getElementsByClassName("js-preview-img");
+            var elementByCss = document.getElementsByClassName(css);
+            var imgTag = document.getElementsByClassName("js-preview-img");
             if (!isEmpty(value)) {
                 extension.space.getAsset(value.sys.id).then((response) => {
                     var i;
-                    for (i = 0; i < x.length; i++) {
+                    for (i = 0; i < elementByCss.length; i++) {
                         var urlString = "url('http:"+ response.fields.file.en.url + "')";
-                        x[i].style.backgroundImage = urlString;
+                        elementByCss[i].style.backgroundImage = urlString;
                     }
-                    for (i = 0; i < img.length; i++) {
-                        img[i].src = response.fields.file.en.url;
+                    for (i = 0; i < imgTag.length; i++) {
+                        imgTag[i].src = response.fields.file.en.url;
                     }
                 })
             } else {
                 var i;
-                for (i = 0; i < x.length; i++) {
-                    x[i].style.backgroundImage = "";
+                for (i = 0; i < elementByCss.length; i++) {
+                    elementByCss[i].style.backgroundImage = "";
                 }
-                for (i = 0; i < img.length; i++) {
-                    img[i].src = "";
+                for (i = 0; i < imgTag.length; i++) {
+                    imgTag[i].src = "";
                 }
             }
         }

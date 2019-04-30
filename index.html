@@ -103,9 +103,13 @@
     <script type="text/javascript">
         window.contentfulExtension.init( extension => {
             extension.window.startAutoResizer();
-            extension.entry.fields.seoTitle.onValueChanged(seoTitleChangeHandler);
-            extension.entry.fields.seoDescription.onValueChanged(seoDescriptionChangeHandler);
-            extension.entry.fields.seoImage.onValueChanged(seoImageChangeHandler);
+            var seoTitleField =  extension.parameters.instance.seoTitle;
+            var seoDescriptionField =  extension.parameters.instance.seoDescription;
+            var seoImageField =  extension.parameters.instance.seoImage;
+
+            extension.entry.fields[seoTitle].onValueChanged(seoTitleChangeHandler);
+            extension.entry.fields[seoDescription].onValueChanged(seoDescriptionChangeHandler);
+            extension.entry.fields[seoImage].onValueChanged(seoImageChangeHandler);
 
         function isEmpty(val) {
             return (val === undefined || val == null || val.length <= 0) ? true : false;
